@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--BS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+        <img src="img/navbar.jpg" alt="" class="banner"> 
+       
+            
+            <div class="menu">
+                
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#" class="btn btn-default">Trang chủ</a>
+                    </li>
+                    
+                    <a class="btn btn-default" data-toggle="modal" href='#modal-id'>Đặt lịch</a>
+                    <div class="modal fade" id="modal-id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Đặt lịch khám online</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="POST" role="form">                                    
+                                        <div class="form-group">
+                                            <label for="">Mã bệnh nhân</label>
+                                            <input type="text" class="form-control" id="txMaBenhNhan" placeholder="Mã bệnh nhân">
+                                            <p class="form-message"></p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Mật khẩu</label>
+                                            <input type="password" name="txPassword" id="txPassword" class="form-control" required="required" title="" placeholder="Mật khẩu">
+                                            <p class="form-message"></p>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="">Ngày khám</label>
+                                            <input type="date" name="txDate" id="txDate" class="form-control" value="" required="required" title="">
+                                            <p class="form-message"></p>
+                                        </div>
+
+                                        <div class="checkbox-group">
+                                            <label for="">Loại dịch vụ</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="textDichVu" value="500000" id="checkKhamYeuCau">
+                                                    Khám bệnh theo yêu cầu
+                                                </label> 
+
+                                                <label>
+                                                    <input type="checkbox" name="textDichVu" value="500000" id="checkKhamNgoaiTru">
+                                                    Điều trị ngoại trú
+                                                </label>
+
+                                                <label>
+                                                    <input type="checkbox" name="textDichVu" value="500000" id="checkBacSiYeuCau">
+                                                    Bác sĩ theo yêu cầu
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Chuyên khoa</label>
+                                            
+                                            <select name="txSelect" id="txSelect" class="form-control">
+                                                <option value="">Ngoại tổng quát</option>
+                                                <option value="">Nhi</option>
+                                                <option value="">Nội tổng quát</option>
+                                            </select>
+                                            
+                                            <label for="" class="lbRegex">(*)</label>
+                                        </div>
+                                        
+                                        <button type="button" class="btn btn-primary btn-modal" id="submit">Submit</button>
+                                    </form>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-modal" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+
+         
+         <table class="table table-bordered table-hover" id="table__LichKham">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã bệnh nhân</th>
+                    <th>Mật khẩu</th>
+                    <th>Ngày khám</th>
+                    <th>Phụ thu dịch vụ</th>
+                    <th>Chuyên khoa</th>
+                </tr>
+            </thead>
+            <tbody id="rowCount">
+                <tr>
+                    <td>1</td>
+                    <td>BN-012345</td>
+                    <td>123456a</td>
+                    <td>12/8/2020</td>
+                    <td>1000000</td>
+                    <td>Ngoại tổng quát</td>
+                </tr>
+            </tbody>
+         </table>
+            
+         <div class="info">
+            <p class="information">21020281-Trần Thị Thanh Tuyền-DHKTPM17B</p>
+         </div>
+
+         <script src="js/main.js"></script>
+</body>
+</html>

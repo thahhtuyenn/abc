@@ -1,0 +1,58 @@
+.banner{
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.menu-link:hover{
+    text-decoration: none;
+}
+
+.menu-link:focus{
+    text-decoration: none;
+}
+
+.menu{
+    background-color: aliceblue;
+}
+
+.breadcrumb{
+    background-color:white;
+    border: 1px solid #000;
+}
+
+.btn-default{
+    color: dodgerblue;
+    background-color:white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-modal{
+    background-color: rgb(113, 183, 194);
+    color: white;
+    border: none;
+}
+
+.lbRegex{
+    color: red;
+    font-style: italic;
+}
+
+.table-bordered{
+    border: 1px solid #000;
+}
+
+.info{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.information{
+    font-size: 32px;
+    font-weight: 700;
+}
+.danger {
+    color: red;
+    font-style: italic;
+}

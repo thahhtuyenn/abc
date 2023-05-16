@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang ky van chuyen</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/index.css">
+    
+</head>
+<body>
+    <div class="app">
+        <div class="navbar">
+            
+            <img src="../img/logo7.jpg" alt="">
+            
+            <ul class="navbar__menu">
+                <li class="menuitem"><a href="#" class="item_link">Trang chủ</a></li>
+                <li class="menuitem"><a href="#" class="item_link">Giới thiệu</a></li>
+                <li class="menuitem"><a href="#" class="item_link">Dịch vụ</a></li>
+                <li class="menuitem">
+                    
+                    <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Ký gửi hàng hóa</a>
+                    <div class="modal fade" id="modal-id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Thông tin linh kiện hàng hóa gửi</h4>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <form action="" method="POST" role="form">                                    
+                                        <div class="form-group row">
+                                            <label for="inputSerial" class="col-sm-4 col-form-label">Số serial: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="inputSerial" class="form-control" id="inputSerial" placeholder="OZMO-600">
+                                                <p class="message"></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label for="inputMota" class="col-sm-4 col-form-label">Mô tả kiện hàng: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="inputMota" class="form-control" id="inputMota" placeholder="Robot Hts Bụi Lau Nhà Dreame D9 Pro">
+                                                <p class="message"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="inputFile" class="col-sm-4 col-form-label">Hình ảnh: </label>
+                                            <div class="col-sm-8">
+                                                <input type="file" name="inputFile" class="form-control-file" id="inputFile" >
+                                                <p class="message"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="inputKilogam" class="col-sm-4 col-form-label">Trọng lượng(KG): </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="inputKilogam" class="form-control" id="inputKilogam" placeholder="3.5">
+                                                <p class="message"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="inputChiPhi" class="col-sm-4 col-form-label">Chi phí vận chuyển: </label>
+                                            <div class="col-sm-8">
+                                                <div id="inputChiPhi"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="buttonXacNhan" type="button" class="btn btn-default" data-dismiss="modal">Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="menuitem"><a href="#" class="item_link">Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <div class="banner row">
+            <div class="col-sm-8">From</div>
+            <div class="col-sm-4 info">
+                <h1 class="title">Qui định thanh toán</h1>
+                <ul class="list">
+                    <li class="text">Khách cọc từ 70% - 100% số tiền của đơn hàng</li>
+                    <li class="text">Hàng về sau 24-48 tiếng kể từ khi kho Trung Quốc ký nhận</li>
+                    <li class="text">Shop sẽ thanh lý đơn hàng nếu sau 1 tuần khách không thanh toán tiền nhận hàng</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="titleTable">Danh sách linh kiện hàng hóa gửi</h3>
+        
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Số serial</th>
+                    <th>Mô tả kiện hàng</th>
+                    <th>Hình ảnh</th>
+                    <th>Trọng lượng(kg)</th>
+                    <th>Phí vận chuyển(VND)</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+                <tr>
+                    <td>1</td>
+                    <td>OZMO-600</td>
+                    <td>Robot Hts Bụi Lau Nhà Dreame D9 Pro</td>
+                    <td>../img/Pro9.PNG</td>
+                    <td>3.5</td>
+                    <td>122500</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="sinhvien">
+            <p class="sv_text">Mã số: 21020281 - Họ tên: Trần Thị Thanh Tuyền</p>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

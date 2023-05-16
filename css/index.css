@@ -1,0 +1,91 @@
+.app{
+    margin-top: 10px;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    background-color: goldenrod;
+    height: 130px;
+    margin-bottom: 0;
+}
+
+.navbar__menu{
+    height: 112px;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menuitem{
+    
+}
+
+.item_link{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.btn-primary{
+    background-color: goldenrod;
+    color: cornflowerblue;
+    border: none;
+    
+}
+
+.btn-primary:hover{
+    background-color: goldenrod;
+    color: cornflowerblue;
+    border: none;
+}
+
+.btn-primary:focus{
+    background-color: goldenrod;
+    color: cornflowerblue;
+    border: none;
+}
+
+.banner{
+    height: 212px;
+    border: 1px solid black;
+}
+
+.info{
+    height: 212px;
+    border-left: 1px solid black;
+}
+
+.list{
+    padding-left: 10px;
+}
+
+.titleTable{
+    color: dodgerblue;
+}
+
+.sinhvien{
+    height: 50px;
+    width: 100%;
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputChiPhi{
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 4px;
+    height: 35px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+}
